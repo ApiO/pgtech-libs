@@ -1,0 +1,2 @@
+// Functions
+func "void Print(const string &in)"

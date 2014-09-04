@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F9598BBC-D10F-4EAD-9115-017021BA0BA6}</ProjectGuid>
+    <RootNamespace>nvtt</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>build/$(Configuration)/</IntDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>build/$(Configuration)/</IntDir>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_ALLOW_KEYWORD_MACROS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../third_party;nvtt;../third_party/config;</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_ALLOW_KEYWORD_MACROS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../third_party;nvtt;../third_party/config;</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="nvtt\CompressDXT.cpp" />
+    <ClCompile Include="nvtt\CompressionOptions.cpp" />
+    <ClCompile Include="nvtt\Compressor.cpp" />
+    <ClCompile Include="nvtt\CompressRGB.cpp" />
+    <ClCompile Include="nvtt\cuda\CudaCompressDXT.cpp" />
+    <ClCompile Include="nvtt\cuda\CudaUtils.cpp" />
+    <ClCompile Include="nvtt\InputOptions.cpp" />
+    <ClCompile Include="nvtt\nvtt.cpp" />
+    <ClCompile Include="nvtt\nvtt_wrapper.cpp" />
+    <ClCompile Include="nvtt\OptimalCompressDXT.cpp" />
+    <ClCompile Include="nvtt\OutputOptions.cpp" />
+    <ClCompile Include="nvtt\QuickCompressDXT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nvtt\CompressDXT.h" />
+    <ClInclude Include="nvtt\CompressionOptions.h" />
+    <ClInclude Include="nvtt\Compressor.h" />
+    <ClInclude Include="nvtt\CompressRGB.h" />
+    <ClInclude Include="nvtt\cuda\Bitmaps.h" />
+    <ClInclude Include="nvtt\cuda\CudaCompressDXT.h" />
+    <ClInclude Include="nvtt\cuda\CudaMath.h" />
+    <ClInclude Include="nvtt\cuda\CudaUtils.h" />
+    <ClInclude Include="nvtt\InputOptions.h" />
+    <ClInclude Include="nvtt\nvtt.h" />
+    <ClInclude Include="nvtt\nvtt_wrapper.h" />
+    <ClInclude Include="nvtt\OptimalCompressDXT.h" />
+    <ClInclude Include="nvtt\OutputOptions.h" />
+    <ClInclude Include="nvtt\QuickCompressDXT.h" />
+    <ClInclude Include="nvtt\SingleColorLookup.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nvtt\cuda\CompressKernel.cu" />
+    <None Include="nvtt\cuda\ConvolveKernel.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nvcore\nvcore.vcxproj">
+      <Project>{3f882649-983f-404a-827e-fc7c5e345c5a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvimage\nvimage.vcxproj">
+      <Project>{eedf797b-c1f5-4563-a7a7-87256b602b3a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\nvmath\nvmath.vcxproj">
+      <Project>{5c34c10d-0465-4984-912b-f31fde0632a0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\squish\squish.vcxproj">
+      <Project>{0ee0355c-5405-41b8-b3b2-d5919fecee74}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleFileWatcher", "SimpleFileWatcher.vcxproj", "{21CD0EA8-7360-4E46-88D8-C28F9A2933BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21CD0EA8-7360-4E46-88D8-C28F9A2933BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21CD0EA8-7360-4E46-88D8-C28F9A2933BB}.Debug|Win32.Build.0 = Debug|Win32
+		{21CD0EA8-7360-4E46-88D8-C28F9A2933BB}.Release|Win32.ActiveCfg = Release|Win32
+		{21CD0EA8-7360-4E46-88D8-C28F9A2933BB}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

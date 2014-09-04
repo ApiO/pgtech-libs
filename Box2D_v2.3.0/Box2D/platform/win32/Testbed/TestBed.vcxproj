@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2DA7F707-A515-46B3-B167-FAF26F9B9726}</ProjectGuid>
+    <RootNamespace>TestBed</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Framework\Main.cpp" />
+    <ClCompile Include="src\Framework\Render.cpp" />
+    <ClCompile Include="src\Framework\Test.cpp" />
+    <ClCompile Include="src\Tests\TestEntries.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Framework\Render.h" />
+    <ClInclude Include="src\Framework\Test.h" />
+    <ClInclude Include="src\Tests\AddPair.h" />
+    <ClInclude Include="src\Tests\ApplyForce.h" />
+    <ClInclude Include="src\Tests\BodyTypes.h" />
+    <ClInclude Include="src\Tests\Breakable.h" />
+    <ClInclude Include="src\Tests\Bridge.h" />
+    <ClInclude Include="src\Tests\BulletTest.h" />
+    <ClInclude Include="src\Tests\Cantilever.h" />
+    <ClInclude Include="src\Tests\Car.h" />
+    <ClInclude Include="src\Tests\Chain.h" />
+    <ClInclude Include="src\Tests\CharacterCollision.h" />
+    <ClInclude Include="src\Tests\CollisionFiltering.h" />
+    <ClInclude Include="src\Tests\CollisionProcessing.h" />
+    <ClInclude Include="src\Tests\CompoundShapes.h" />
+    <ClInclude Include="src\Tests\Confined.h" />
+    <ClInclude Include="src\Tests\ContinuousTest.h" />
+    <ClInclude Include="src\Tests\ConvexHull.h" />
+    <ClInclude Include="src\Tests\ConveyorBelt.h" />
+    <ClInclude Include="src\Tests\DistanceTest.h" />
+    <ClInclude Include="src\Tests\Dominos.h" />
+    <ClInclude Include="src\Tests\DumpShell.h" />
+    <ClInclude Include="src\Tests\DynamicTreeTest.h" />
+    <ClInclude Include="src\Tests\EdgeShapes.h" />
+    <ClInclude Include="src\Tests\EdgeTest.h" />
+    <ClInclude Include="src\Tests\Gears.h" />
+    <ClInclude Include="src\Tests\Mobile.h" />
+    <ClInclude Include="src\Tests\MobileBalanced.h" />
+    <ClInclude Include="src\Tests\MotorJoint.h" />
+    <ClInclude Include="src\Tests\OneSidedPlatform.h" />
+    <ClInclude Include="src\Tests\Pinball.h" />
+    <ClInclude Include="src\Tests\PolyCollision.h" />
+    <ClInclude Include="src\Tests\PolyShapes.h" />
+    <ClInclude Include="src\Tests\Prismatic.h" />
+    <ClInclude Include="src\Tests\Pulleys.h" />
+    <ClInclude Include="src\Tests\Pyramid.h" />
+    <ClInclude Include="src\Tests\RayCast.h" />
+    <ClInclude Include="src\Tests\Revolute.h" />
+    <ClInclude Include="src\Tests\Rope.h" />
+    <ClInclude Include="src\Tests\RopeJoint.h" />
+    <ClInclude Include="src\Tests\SensorTest.h" />
+    <ClInclude Include="src\Tests\ShapeEditing.h" />
+    <ClInclude Include="src\Tests\SliderCrank.h" />
+    <ClInclude Include="src\Tests\SphereStack.h" />
+    <ClInclude Include="src\Tests\TheoJansen.h" />
+    <ClInclude Include="src\Tests\Tiles.h" />
+    <ClInclude Include="src\Tests\TimeOfImpact.h" />
+    <ClInclude Include="src\Tests\Tumbler.h" />
+    <ClInclude Include="src\Tests\VaryingFriction.h" />
+    <ClInclude Include="src\Tests\VaryingRestitution.h" />
+    <ClInclude Include="src\Tests\VerticalStack.h" />
+    <ClInclude Include="src\Tests\Web.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
